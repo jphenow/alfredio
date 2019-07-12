@@ -21,6 +21,8 @@ what I needed at this point. So steps to running are like so:
 * Point Alfred workflow at your code
 * Execute your query
 
+![](https://cl.ly/299b9469ca45/Screen%252520Recording%2525202019-07-12%252520at%25252009.45%252520AM.gif)
+
 ### Authoring Alfred Items
 
 I recommend having a `bin` dir in your Home directory. In there you might add something like this:
