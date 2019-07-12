@@ -28,7 +28,7 @@ what I needed at this point. So steps to running are like so:
 I recommend having a `bin` dir in your Home directory. In there you might add something like this:
 
 ```typescript
-import { Parser } from "../Code/alfredio/alfredio.ts";
+import { Parser, ItemHandler } from "../Code/alfredio/alfredio.ts";
 
 const items = [new ItemHandler({
     uid: "jonphenow.alfred.gh",
@@ -44,9 +44,9 @@ const items = [new ItemHandler({
         const [subcommand] = query;
         return "github".startsWith(subcommand);
     }
-});];
+})];
 
-Parser.process(items, Deno.args.slice(1))
+Parser.process(items, Deno.args.slice(1));
 ```
 
 For more information on the format of the AlfredItems see the interface and [the Alfred Docs](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/)
