@@ -1,5 +1,3 @@
-#!/usr/bin/env deno
-
 export interface AlfredIcon {
     type: "fileicon" | "filetype";
     path: string; // ~/Desktop | path.to.png
