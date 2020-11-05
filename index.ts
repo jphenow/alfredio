@@ -79,7 +79,7 @@ export class Parser {
     constructor(private items: ItemHandler[], private input: string[]) { }
 
     public static process(items: ItemHandler[], args: string[]): number {
-        const subcommand = args[0];
+        const subcommand = args[0] || "";
         const query = args.slice(1);
 
         switch (subcommand.toLowerCase()) {
@@ -113,7 +113,7 @@ export class Parser {
 
         for (const item of this.items) {
             if (item.matcher(query)) {
-                Deno.run({ args: item.action });
+                Deno.run({ cmd: item.action });
                 break;
             }
         }
